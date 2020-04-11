@@ -1,0 +1,54 @@
+{
+    "name": "ansori24/xcomponent",
+    "description": "Laravel Tailwind Component",
+    "keywords": [
+        "ansori24",
+        "xcomponent"
+    ],
+    "homepage": "https://github.com/ansori24/xcomponent",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Misbah Ansori",
+            "email": "misbah.ansori24@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ansori24\\Xcomponent\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ansori24\\Xcomponent\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ansori24\\Xcomponent\\XcomponentServiceProvider"
+            ],
+            "aliases": {
+                "Xcomponent": "Ansori24\\Xcomponent\\XcomponentFacade"
+            }
+        }
+    }
+}
